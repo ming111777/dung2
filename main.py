@@ -4,13 +4,8 @@ from multiply import multiply
 from divide import divide
 
 def calculator():
-<<<<<<< HEAD
     a = float(input("첫 번째 숫자: "))
     b = float(input("두 번째 숫자: "))
-=======
-    a = float(input("1st number: "))
-    b = float(input("2nd number: "))
->>>>>>> ming/123
     op = input("연산자 (+, -, *, /): ")
     operations = {
         '+': add,

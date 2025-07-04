@@ -1,0 +1,9 @@
+start = time.time()
+model4 = XGBClassifier(tree_method='hist', device='cuda')
+
+# 교차 검증
+kfold = KFold(n_splits=10, shuffle=True, random_state=1)
+r1 = cross_val_score(model4, train_X, train_y, scoring='f1', cv=kfold)
+print(f'평균 f1 Score : {r1.mean()}')
+
+print(f"{time.time()-start:.4f} sec")
